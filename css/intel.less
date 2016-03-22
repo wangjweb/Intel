@@ -1,0 +1,61 @@
+//Bootstrap提供的样式
+@import "bootstrap.less";
+
+//自定义的样式
+body {
+  margin-top: @navbar-height;
+}
+.logo {
+  display: inline-block;
+  width: 63px;
+  height: 42px;
+  background: url("../img/hdr-spr.png") 0 -512px no-repeat;
+  margin-top: 10px;
+}
+.login-menu {
+  width: 300px;
+  padding: 15px;
+  background: #fff;
+}
+.main {
+  background: @blue-dark;
+  color: @text-color-light;
+  a {
+    color: @text-color-light;
+    &:hover {
+      color: @text-color-light;
+    }
+  }
+
+  .masking-parent {
+    background-color: @blue-light;
+    position: relative;
+    .masking-text {
+      padding: 15px;
+    }
+    @media screen and (min-width: @screen-md-min) {
+      .masking-text {
+        position: absolute;
+        bottom: 0;
+      }
+    }
+  }
+
+  .masking-div-parent {
+    position: relative;
+    overflow: hidden;
+    .masking-div {
+      position: absolute;
+      top: 120px;
+      bottom: 0;
+      padding: 10px;
+      cursor: pointer;
+      //opacity: .5;
+      //background: #000;
+      background: rgba(0,0,0, .5);
+    }
+  }
+}
+.main > .container > .row {
+  margin-bottom: 25px;
+}
